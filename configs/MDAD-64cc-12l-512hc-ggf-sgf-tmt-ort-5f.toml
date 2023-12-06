@@ -1,0 +1,31 @@
+desc = "MDAD-64cc-12l-512hc-ggf-sgf-tmt-ort-5f"
+
+[model]
+name = "OGNNMDA"
+add_self_loops = false
+chunk_size = 64
+diff_or = true
+dropout_rate = 0.4
+dropout_rate2 = 0
+global_gating = false
+hidden_channel = 512
+num_layers = 12
+num_layers_input = 2
+patience = 200
+simple_gating = false
+tm = true
+
+[train]
+weight_decay = 0.0005
+weight_decay2 = 5e-8
+learning_rate = 0.001
+epochs = 600
+seed = 42
+use_gpu = true
+k_folds = 5
+
+[dataset]
+name = "MDAD"
+data_dir = "./data"
+drugs = 1373
+microbes = 173
